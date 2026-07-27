@@ -1,13 +1,13 @@
-# 📦 Amazon India — Sales & Product Analysis
+# 📦 Amazon India Sales & Product Analysis
 
-A comprehensive end-to-end data analysis of Amazon India product listings, covering data cleaning, descriptive statistics, correlation analysis, regression modelling, hypothesis testing, and data visualisation — all performed in Microsoft Excel.
+A comprehensive end-to-end data analysis of Amazon India product listings, covering data cleaning, descriptive statistics, correlation analysis, regression modelling, hypothesis testing, and data visualisation all performed in Microsoft Excel.
 
 ---
 
 ## 🎯 Project Overview
 
 **Main Aim:**
-To analyse Amazon India product listings and determine what factors — price, discount, and product category — influence customer satisfaction (ratings), using the full data analysis pipeline from raw data to actionable insights.
+To analyse Amazon India product listings and determine what factors price, discount, and product category influence customer satisfaction (ratings), using the full data analysis pipeline from raw data to actionable insights.
 
 **Business Questions Answered:**
 - What does Amazon India's product and pricing landscape look like?
@@ -41,7 +41,7 @@ Amazon-Indian-Sales---Analysis/
 | Attribute | Detail |
 |---|---|
 | **Dataset Name** | Amazon India Product Reviews & Pricing |
-| **Source** | [Kaggle — karkavelrajaj](https://www.kaggle.com/datasets/karkavelrajaj/amazon-sales-dataset) |
+| **Source** | [Kaggle karkavelrajaj](https://www.kaggle.com/datasets/karkavelrajaj/amazon-sales-dataset) |
 | **Collection Method** | Web scraping from amazon.in |
 | **Time Period** | 2022 |
 | **Total Records** | 1,465 rows |
@@ -89,14 +89,14 @@ Amazon-Indian-Sales---Analysis/
 
 The following issues were identified and resolved before analysis:
 
-1. **Currency symbol in prices** — Removed ₹ symbol using `=VALUE(SUBSTITUTE(SUBSTITUTE(D2,"₹",""),",",""))`
-2. **Percentage symbol in discounts** — Removed % using `=VALUE(SUBSTITUTE(F2,"%",""))`
-3. **Comma-formatted numbers** — Removed commas from rating counts using `=VALUE(SUBSTITUTE(H2,",",""))`
-4. **Scraping artefacts in ratings** — Fixed pipe characters using `=IFERROR(VALUE(TRIM(CLEAN(G2))),"")`
-5. **Nested category paths** — Extracted main category using `=LEFT(C2,FIND("|",C2)-1)`
-6. **Duplicate product IDs** — Removed 114 duplicates using Data → Remove Duplicates
-7. **Missing values** — 2 missing values in rating_count handled automatically by VALUE() formula
-8. **Irrelevant columns** — Removed 8 columns (URLs, user details, review text, descriptions)
+1. **Currency symbol in prices** Removed ₹ symbol using `=VALUE(SUBSTITUTE(SUBSTITUTE(D2,"₹",""),",",""))`
+2. **Percentage symbol in discounts** Removed % using `=VALUE(SUBSTITUTE(F2,"%",""))`
+3. **Comma-formatted numbers** Removed commas from rating counts using `=VALUE(SUBSTITUTE(H2,",",""))`
+4. **Scraping artefacts in ratings** Fixed pipe characters using `=IFERROR(VALUE(TRIM(CLEAN(G2))),"")`
+5. **Nested category paths** Extracted main category using `=LEFT(C2,FIND("|",C2)-1)`
+6. **Duplicate product IDs** Removed 114 duplicates using Data → Remove Duplicates
+7. **Missing values** 2 missing values in rating_count handled automatically by VALUE() formula
+8. **Irrelevant columns** Removed 8 columns (URLs, user details, review text, descriptions)
 
 ---
 
@@ -171,7 +171,7 @@ Rating = 4.196 + (-0.00223 × Discount%)
 | High Discount Mean (>50%) | 4.052 (608 products) |
 | Low Discount Mean (≤50%) | 4.125 (743 products) |
 | p-value | 0.0000111 |
-| **Decision** | **Reject H₀ — Statistically significant difference** |
+| **Decision** | **Reject H₀  Statistically significant difference** |
 
 ---
 
@@ -191,19 +191,19 @@ All charts were built in Excel using Pivot Tables and the Chart Wizard:
 
 ## 🔑 Key Findings
 
-1. **Price distribution is right-skewed** — Mean (Rs.3,304) far exceeds Median (Rs.899) due to 209 premium outlier products
-2. **Amazon India relies heavily on discounting** — Average discount is 47%; most common is 50%
+1. **Price distribution is right-skewed** Mean (Rs.3,304) far exceeds Median (Rs.899) due to 209 premium outlier products
+2. **Amazon India relies heavily on discounting** Average discount is 47%; most common is 50%
 3. **Electronics dominates by price** (Rs.6,226 avg) but Office Products leads in satisfaction (4.31 rating)
-4. **Price and discount do NOT strongly predict ratings** — All correlations below 0.3; R² = 2.6%
-5. **High discounts are linked to lower ratings** — Statistically significant at p = 0.0000111
-6. **Customer satisfaction is consistently high** — Overall average rating of 4.09 / 5.0
+4. **Price and discount do NOT strongly predict ratings** All correlations below 0.3; R² = 2.6%
+5. **High discounts are linked to lower ratings** Statistically significant at p = 0.0000111
+6. **Customer satisfaction is consistently high** Overall average rating of 4.09 / 5.0
 
 ---
 
 ## 💡 Recommendations
 
 - Target the **Rs.299–Rs.899 price range** where demand is highest
-- **Avoid discounts above 50%** — associated with marginally lower customer ratings
+- **Avoid discounts above 50%** associated with marginally lower customer ratings
 - **Office Products** demonstrate that niche, quality products succeed without heavy discounting
 - Invest in **product quality and accurate descriptions** over price competition
 - Expand analysis with **time-series data** to track price and rating trends over time
@@ -220,7 +220,7 @@ All charts were built in Excel using Pivot Tables and the Chart Wizard:
    - Go to **Unique Products** to see the statistics, correlation, regression, and hypothesis testing tables
    - Go to **Pivot Tables** to see category analysis and charts
    - Go to **Dashboard** for the visual overview
-4. All formulas are live — you can explore and interact with the data directly
+4. All formulas are live you can explore and interact with the data directly
 
 ---
 
@@ -250,4 +250,3 @@ GitHub: [https://github.com/Kashb-shielah](https://github.com/Kashb-shielah)
 
 ---
 
-*This project is part of an ongoing data analysis portfolio. A Healthcare Dataset Analysis is coming next.*
